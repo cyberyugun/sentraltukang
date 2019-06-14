@@ -1,0 +1,43 @@
+
+<div fxLayoutAlign="center center" >
+
+    <form
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutGap="10px"
+      [formGroup]="loginForm"
+      >
+      <img src="../../../assets/img/Logo.png" alt="thumbnail" class="img-thumbnail"
+      style="width: 200px">
+      <mat-form-field>
+        <input
+          type="email" #email
+          matInput
+          placeholder="Email"
+          formControlName="email">
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          type="password"
+          matInput
+          #password
+          placeholder="Password"
+          formControlName="password">
+      </mat-form-field>
+      
+  
+      <button type="submit" mat-button color="warn" (click)="login()" >Login</button>
+      <button type="submit" mat-button color="warn" (click)="register()" >Register</button>
+  
+    </form>
+  
+  </div>
+  
+  <!-- <ol>
+    <li>Add an email and password field (with Material Components of course)</li>
+    <li>Add validation (email => required and email, password => required)</li>
+    <li>Show errors and hints</li>
+    <li>Make form submittable and disable button if invalid</li>
+    <li>BONUS: Do all of that by using the reactive approach!</li>
+  </ol> -->
+  

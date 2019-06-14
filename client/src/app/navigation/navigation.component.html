@@ -1,0 +1,44 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+   <!-- sidenav here  -->
+        <mat-nav-list>
+            
+           
+            <a *ngIf="token"  mat-list-item routerLink="/userlist" (click)="onClose()">
+            
+              <span class="nav-caption">User List</span>
+            </a>
+            <mat-list-item>
+              <button *ngIf="token" mat-icon-button (click)="onClose();logout();">
+               
+                <span class="nav-caption">Log Out</span>
+              </button>
+            </mat-list-item>
+            <a style="margin-top:30px;" mat-list-item>
+              
+                <span class="nav-caption">v 1.0</span>
+              </a>
+            <mat-list-item>
+                
+              </mat-list-item>
+          </mat-nav-list>
+          
+<!-- end side nav -->
+
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar style="background-color: white;">
+        <div>
+          <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+        <div> <img src="../../../assets/img/Logo.png" alt="thumbnail" class="img-thumbnail"
+          ></div>
+      
+      </mat-toolbar>
+    <app-welcome></app-welcome>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

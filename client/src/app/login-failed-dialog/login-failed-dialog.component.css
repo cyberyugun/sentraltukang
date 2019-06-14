@@ -1,0 +1,23 @@
+p{
+
+}
+
+mat-dialog-content>div{
+    position: absolute;
+    height: 48px;
+    left: 0%;
+    right: 0%;
+    top: calc(50% - 48px/2 - 23.5px);
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    /* or 171% */
+    
+    text-align: center;
+    letter-spacing: 0.0734694px;
+    
+    color: #000000; 
+}

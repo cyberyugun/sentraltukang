@@ -1,0 +1,111 @@
+<div style="
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 94.34%;height: 40px; width: 360px;
+">
+    <div> <button mat-icon-button (click)="back()"><mat-icon>keyboard_arrow_left</mat-icon></button></div>
+    <p style="position: absolute;
+    left: 150px;
+    top: 0px;
+    bottom: 1000px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.25px;
+    
+    color: #000000;">Update</p>
+  </div>
+  <hr style="background: rgba(0, 0, 0, 0.87);height: 0px; width: 360px;">
+<div class="signup-form">
+  <form  #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <mat-form-field style="position: absolute;
+    width: 329px;
+    height: 48px;
+    left: 10px;
+    top: 104px;">
+      <input style="" type="name" matInput placeholder="Name" ngModel name="name" required  #nameInput="ngModel" value={{user.name}}>
+      <mat-error *ngIf="nameInput.hasError('required')">Field must not be empty.</mat-error>
+      <mat-error *ngIf="!nameInput.hasError('required')">Name is invalid.</mat-error>
+    </mat-form-field>
+    <mat-form-field style="position: absolute;
+    width: 329px;
+    height: 48px;
+    left: 10px;
+    top: 152px;
+    ">
+      <input type="email" matInput placeholder="Email" ngModel name="email" email required #emailInput="ngModel"  value={{user.email}} disabled>
+      <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty.</mat-error>
+      <mat-error *ngIf="!emailInput.hasError('required')">Name is invalid.</mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field style="position: absolute;
+    width: 329px;
+    height: 48px;
+    left: 10px;
+    top: 210px;">
+      <input [type]="hidea ? 'password' : 'text'"  matInput placeholder="Password"  ngModel name="password" required minlength="6"   #pwInputa="ngModel">
+      <button mat-icon-button matSuffix (click)="hidea = !hidea" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hidea ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+    </mat-form-field>
+
+
+    <mat-form-field style="position: absolute;
+    width: 329px;
+    height: 48px;
+    left: 10px;
+    top: 258px;
+    ">
+      <input [type]="hide ? 'password' : 'text'"  matInput placeholder="Re-nter Password" ngModel name="password1" required minlength="6" #pwInput="ngModel">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+      
+    </mat-form-field>
+    <mat-form-field style="position: absolute;
+    width: 329px;
+    height: 48px;
+    left: 10px;
+    top: 306px;">
+      <input matInput placeholder="Birthday" [matDatepicker]="picker" [max]="maxDate" required ngModel name="date"  value={{user.date}}>
+      <mat-datepicker-toggle matSuffix [for]="picker">
+          <mat-icon matDatepickerToggleIcon>date_range</mat-icon>
+      </mat-datepicker-toggle>
+      <mat-datepicker #picker disabled="false"></mat-datepicker>
+    </mat-form-field>
+  
+   
+   <button style="position: absolute;
+   left: 61.83%;
+   right: 3.61%;
+   top: 64.49%;
+   bottom: 58.55%;
+   width: 110px;height: 28px; background: #FE4001;text-align: center;
+letter-spacing: 1.25px;color: #FFFFFF;font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;" type="submit" mat-raised-button  [disabled]="f.invalid">Update</button>
+
+  </form>
+  <button style="position: absolute;
+  left: 5.56%;
+  right: 63.89%;
+  top: 64.49%;
+   bottom: 58.55%;
+  width: 110px;height: 28px; color: #FE4001; text-align: center;letter-spacing: 1.25px; font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;background: #FFFFFF;"  mat-raised-button (click)="back()">Back</button>
+  
+
+</div>

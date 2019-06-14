@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+  .flex-container {
+    display: flex;
+    background-color: white;
+    height: 50px;
+    border-color: grey;
+  }
+  
+  .flex-container > div {
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+    font-size: 30px;
+  }
+  
+
+  

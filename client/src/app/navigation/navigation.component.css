@@ -1,0 +1,37 @@
+mat-sidenav-container{
+    height: 100%;
+    background-color: white;
+  }
+
+  mat-sidenav-content, mat-sidenav {
+    height: 172px;
+  }
+  
+  mat-sidenav {
+    width: 170px;
+    margin-left:30px;
+    margin-top: 40px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover,
+  a:active {
+    color: lightgray;
+  }
+  
+  .navigation-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  img{
+    width: 202.07px;
+    height: 37px;
+margin-left: 45px;
+margin-right: auto;
+  }
+  

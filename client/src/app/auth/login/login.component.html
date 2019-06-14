@@ -1,0 +1,72 @@
+
+<div fxLayoutAlign="center center" >
+
+  <form
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="10px"
+    [formGroup]="loginForm"
+    >
+    <img src="../../../assets/img/Logo.png" alt="thumbnail" class="img-thumbnail"
+    style="
+    width: 202.07px;
+    height: 37px;
+    ">
+  
+    <mat-form-field style="width: 329px;
+    height: 48px;
+   
+    ">
+      <input
+        type="email"
+        matInput
+        placeholder="Email"
+        formControlName="email">
+      <mat-error>Invalid or missing email.</mat-error>
+    </mat-form-field>
+    <mat-form-field style="width: 329px;
+    height: 48px;
+   
+    ">
+      <input
+        type="password"
+        matInput
+        placeholder="Password"
+        formControlName="password">
+      <mat-error>Missing password.</mat-error>
+    </mat-form-field>
+    
+
+    <button style="background: #FE4102;height: 40px;width: 326px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1.25px;
+    left: 0px;right: 0px;top: 0px;
+    color: #FFFFFF;font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;" type="submit" mat-raised-button  (click)="login()" >Login</button>
+    <button style="height: 40px;width: 326px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1.25px;
+    
+    color: #FE4102;
+    font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;background: #FFFFFF;" type="submit" mat-raised-button  routerLink="/signup" >Register</button>
+
+  </form>
+
+</div>
+
+<!-- <ol>
+  <li>Add an email and password field (with Material Components of course)</li>
+  <li>Add validation (email => required and email, password => required)</li>
+  <li>Show errors and hints</li>
+  <li>Make form submittable and disable button if invalid</li>
+  <li>BONUS: Do all of that by using the reactive approach!</li>
+</ol> -->
